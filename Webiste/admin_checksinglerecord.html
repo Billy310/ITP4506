@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/order.css">
+    <title>Information:</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function () {
+        var searchingitem = localStorage.getItem("searchingitem");
+        $(".form-title").append(searchingitem);
+        $("title").append(searchingitem);
+        $.getJSON("json/ticket_ver1.json", function (jd) {
+            for (var x = 0; x < jd.ticket.length; x++) {
+                if (searchingitem == jd.ticket[x].flightnumber) {
+                    $("#name").val(jd.ticket[x].fullname);
+                    $("#bookdate").val(jd.ticket[x].bookdate);
+                    $("#from").val(jd.ticket[x].Departure);
+                    $("#to").val(jd.ticket[x].Arrive);
+                    $("#fdate").val(jd.ticket[x].date);
+                    $("#ftime").val(jd.ticket[x].time);
+                    $("#fclass").val(jd.ticket[x].Type);
+                    $("#pay").val(jd.ticket[x].Status_P);
+                    $("#snum").val(jd.ticket[x].seat);
+                    $("#fnum").val(jd.ticket[x].flightnumber);
+                    $("#price").val(jd.ticket[x].Total);
+
+                    break;
+                }
+            }
+        });
+    });
+
+
+</script>
+
+<body>
+
+    <div class="form-container">
+        <h2 class="form-title">Record:</h2>
+        <form action="" class="checkout-form">
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Passenger Name:</label>
+                    <input type="text" id="name" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Booking Date</label>
+                    <input type="text" id="bookdate" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Departure</label>
+                    <input type="text" id="from" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Arrive</label>
+                    <input type="text" id="to" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Flight Date</label>
+                    <input type="text" id="fdate" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Flight Time</label>
+                    <input type="text" id="ftime" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Flight Classes</label>
+                    <input type="text" id="fclass" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Price</label>
+                    <input type="text" id="price" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+         
+                <div class="input-line">
+                    <label for="name">Flight Number</label>
+                    <input type="text" id="fnum" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Seat Number</label>
+                    <input type="text" id="snum" readonly>
+                </div>
+            </div>
+            <div class="input-line">
+                <label for="name">Paid?</label>
+                <input type="text" id="pay" readonly>
+            </div>
+        
+            <input type="button" id="confirm" value="Affirmative" onclick="self.close()">
+            <input type="button" id="confirm" value="Delete" onclick="self.close()">
+        </form>
+    </div>
+
+</body>
+
+</html>

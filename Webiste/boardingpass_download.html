@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/boardingpassdownload.css">
+    <title>Complete your purchase</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script src="js/downloadboardingpass.js"></script>
+<header><img src="img/IVEIcon.png" />
+
+</header>
+
+<body>
+    <h2 class="form-title">Your Boarding Pass</h2>
+    <div class="content">
+        <div id="col">
+
+            <h5>IVE AIRLINE BOARDING PASS</h5>
+        </div>
+        <div id="col1"><img id="photo1" src="img/IVEIcon1.png" /><br><img id="barcode" src="img/barcode.png" />
+            <hr><strong class="pname">Passenger name:</strong><br><strong id="ppnum">Passenger passport
+                Number:</strong><br><strong id="fnum">Flight No:</strong><br><strong
+                class="date">Date:</strong><br><strong id="dest"></strong><br><strong
+                class="btime">b</strong><br><strong class="dtime">d</strong><br><strong id="seatnum"></strong><br>
+        </div>
+        <div id="col2"><img src="img/PlaneIcon2.png" /></div>
+        <div id="col4">IVE AIRLINE</div>
+        <div id="col2a">
+
+            <strong class="pname">Passenger name:</strong><br><strong id="ppnum">PNR:</strong><br><strong
+                class="seat">Seat:</strong><br><strong id="luggage">Luggage Weight:</strong>
+
+        </div>
+        <div id="veticalline2">
+
+
+        </div>
+        <div id="col3">
+
+
+            <strong class="pname">XXX</strong><br>
+            <strong class="from">From:</strong><br>
+            <strong class="to">To:</strong><br>
+            <strong class="date">Date:</strong><br>
+            <strong class="btime">Boarding Time:</strong><br>
+            <strong class="dtime">Departure Time:</strong><br>
+            <strong class="fclass">Class:</strong><br>
+            <strong class="seat">Seat:</strong>
+        </div>
+        <div id="veticalline">
+
+
+        </div>
+
+
+    </div>
+    <div id="col5">
+       
+        <!-- <button class="custom-btn btn-4" id="getluggagecode">Get Luggagecode</button> -->
+
+        <button id="print" class="print-button" onclick="window.print()"> <span class="print-icon"></span></button>
+
+
+
+        <details>
+            <summary>
+                <div class="btn_view">
+                    Seat Information
+                </div>
+                <div class="details-modal-overlay"></div>
+            </summary>
+            <div class="details-modal">
+                <div class="details-modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                            fill="black" />
+                    </svg>
+                </div>
+                <div class="details-modal-title">
+                    <h1>My details modal</h1>
+                </div>
+                <div class="details-modal-content">
+                    <p>
+                        <img src="img/plane.png" />
+                    </p>
+                </div>
+            </div>
+        </details>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    </br>
+
+    <div id="openModal" class="modalbg">
+        <div class="dialog">
+            <a href="#close" title="Close" class="close">X</a>
+            <h2 class="popupt">Web Check-In</h2>
+            <br>
+            <h2 class="popupt" id="popuptitle">
+                Dangerous Goods & Restricted Articles
+            </h2>
+            <hr>
+
+            if you have any dangerous goods or restricted articles.plseas declare them,carry these objects may be an
+            offence & may result in prosecution.</br>
+
+            <br>
+            <h4>Important Notice for passengers</h4>
+            </br>
+            <ul>
+                <li>Only travel with baggage that belongs to you.</li>
+                <li>Do not accept baggage from other people.</li>
+                <li>Do not leave your bags unattended.</li>
+            </ul>
+
+            <br>
+
+            <table id="shown">
+                <tr>
+                    <td><img src="img/Corrosives.PNG" /></td>
+                    <td><img src="img/Gas.PNG" /></td>
+                    <td><img src="img/Flammable_Liquids.PNG" /></td>
+                    <td><img src="img/orangic_peroxides.PNG" /></td>
+                    <td><img src="img/Oxidising_materials.PNG" /></td>
+                    <td><img src="img/toxic_substances.PNG" /></td>
+                </tr>
+                <tr>
+                    <td class="descrip">Corrosives</td>
+                    <td class="descrip">Gas</td>
+                    <td class="descrip">Flammable Liquids</td>
+                    <td class="descrip">Orangic Peroxides</td>
+                    <td class="descrip">Oxidising Materials</td>
+                    <td class="descrip">Toxic Substances</td>
+
+                </tr>
+            </table>
+
+
+            <br>
+            <br>
+
+
+            <br>
+            <br>
+
+            <a href="#close"> <button id="removea" class="btn-72">OK, Notice</button></a>
+
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+
+</html>

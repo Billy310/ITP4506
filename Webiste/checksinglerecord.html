@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/checkticket.css">
+    <title>Information:</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script type="text/javascript" language="javascript" src="js/edit.js"></script>
+
+<body>
+
+    <div class="form-container">
+        <h2 class="form-title">Record:</h2>
+        <form action="" class="checkout-form">
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Passenger Name:</label>
+                    <input type="text" id="name" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Booking Date</label>
+                    <input type="text" id="bookdate" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Departure</label>
+                    <input type="text" id="from" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Arrive</label>
+                    <input type="text" id="to" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Flight Date</label>
+                    <input type="text" id="fdate" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Flight Time</label>
+                    <input type="text" id="ftime" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Flight Classes</label>
+                    <input type="text" id="fclass" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Price</label>
+                    <input type="text" id="price" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+         
+                <div class="input-line">
+                    <label for="name">Flight Number</label>
+                    <input type="text" id="fnum" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Seat Number</label>
+                    <input type="text" id="snum" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+            <div class="input-line">
+                <label for="name">Paid?</label>
+                <input type="text" id="pay" readonly>
+            </div>
+            <div class="input-line">
+                <label for="name">Luggage Weight Allowance</label>
+                <input type="text" id="luggage" readonly>
+            </div>
+        </div>
+        
+            <input type="button" id="confirm" value="Affirmative" onclick="self.close()">
+        </form>
+    </div>
+
+</body>
+
+</html>

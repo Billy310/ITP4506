@@ -1,0 +1,218 @@
+
+:root {
+    --primColor: #dcdcdc;
+    --secoColor: #555555;
+    --cornerRad: 4px;
+  }
+  body {
+    background-color: var(--primColor);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+	color: #7f8db0;
+  }
+  details {
+    margin: 40px;
+  }
+  summary {
+    writing-mode: vertical-lr;
+    text-align: center;
+    padding: 12px 10px;
+    width: 23px;
+    height: 17px;
+    background-color: var(--primColor);
+    border: 2px solid var(--secoColor);
+    border-radius: var(--cornerRad);
+    color: var(--secoColor);
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: transform 200ms ease-in-out 0s;
+  }
+  summary::before,
+  summary::after {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+  summary::before {
+    content: "";
+  }
+  summary::after {
+    content: "III";
+    letter-spacing: -1px;
+  }
+  summary:hover {
+    transform: scale(1.1);
+  }
+  summary::marker {
+    font-size: 0;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] .menu {
+    animation-name: menuAnim;
+  }
+  details[open] summary::before {
+    content: "X";
+  }
+  details[open] summary::after {
+    content: "";
+  }
+  .menu {
+    height: 0;
+    width: fit-content;
+    border-radius: var(--cornerRad);
+    background-color: var(--primColor);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    animation: closeMenu 300ms ease-in-out forwards;
+  }
+  .menu a {
+    padding: 12px 24px;
+    margin: 0 16px;
+    color: var(--secoColor);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    text-align: center;
+    transition: filter 200ms linear 0s;
+  }
+  .menu a:nth-of-type(1) {
+    padding-top: 24px;
+  }
+  .menu a:nth-last-of-type(1) {
+    border-bottom: none;
+  }
+  .menu a:hover {
+    filter: brightness(200%);
+  }
+  details::before {
+    content: "← Here to Order";
+    color: var(--secoColor);
+    position: absolute;
+    margin-left: 80px;
+    padding: 10px 10px;
+    opacity: 0.4;
+  }
+  details[open]::before {
+    animation: fadeMe 300ms linear forwards;
+  }
+  @keyframes menuAnim {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 312px;
+    }
+  }
+  @keyframes fadeMe {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+
+.box {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; 
+  right:550px;
+  top: 150px;
+	display: flex;
+	width: 950px;
+	margin: 140px auto;
+}
+.single-box {
+	width: 300px;
+	background: #fff;
+	margin-right: 20px;
+	padding: 25px;
+	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	position: relative;
+}
+.single-box:last-child {
+	margin-right: 0;
+}
+.single-box .img img {
+	width: 200px;
+	margin-bottom: 10px;
+}
+.single-box .price {
+	font-weight: 600;
+	font-size: 45px;
+}
+.img {
+	position: absolute;
+	top: -25%;
+	left: 20%;
+}
+.single-box h3 {
+	margin-top: 25%;
+	margin-bottom: 15px;
+}
+.single-box p {
+	line-height: 1.9;
+}
+.single-box a {
+	background: #f57e20;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 50px;
+	padding: 10px 20px;
+	display: inline-block;
+	margin-top: 30px;
+}
+
+.custom-radios div {
+  display: inline-block;
+}
+.custom-radios input[type="radio"] {
+  display: none;
+}
+.custom-radios input[type="radio"] + label {
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.custom-radios input[type="radio"] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 44px;
+}
+.custom-radios input[type="radio"] + label span img {
+  opacity: 0;
+  transition: all .3s ease;
+}
+.custom-radios input[type="radio"]#color-1 + label span {
+  background-color: #2ecc71;
+}
+.custom-radios input[type="radio"]#color-2 + label span {
+  background-color: #2ecc71;
+}
+.custom-radios input[type="radio"]#color-3 + label span {
+  background-color: #2ecc71;
+}
+.custom-radios input[type="radio"]#color-4 + label span {
+  background-color: #2ecc71;
+}
+.custom-radios input[type="radio"]:checked + label span img {
+  opacity: 1;
+}

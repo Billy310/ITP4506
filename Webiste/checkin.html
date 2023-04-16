@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/checkinformation.css">
+    <title>Information:</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script type="text/javascript" language="javascript" src="js/checkinformation.js"></script>
+<header> <img src="img/IVEIcon.png" />
+
+</header>
+
+<body>
+    <div class="haha"></div>
+
+
+
+
+
+    <h2 class="form-title">Record:</h2>
+
+    <div class="form-container">
+
+
+
+
+
+
+
+        <form action="" class="checkout-form">
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Passenger Name:</label>
+                    <input class="otext" type="text" id="name" readonly disabled>
+                </div>
+                <div class="input-line">
+                    <label for="name">Passenger Passport Number:</label>
+                    <input class="otext" type="text" id="ppn" readonly disabled>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Reserved Date: (dd/MM/yyyy)</label>
+                    <input class="otext" type="text" id="bookdate" readonly disabled>
+                </div>
+                <div class="input-line">
+                    <label for="name">Valid</label>
+                    <input class="otext" type="text" id="pay" readonly disabled>
+                </div>
+            </div>
+
+
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Departure</label>
+                    <input class="otext" type="text" id="from" readonly disabled>
+                </div>
+                <div class="input-line">
+                    <label for="name">Arrive</label>
+                    <input class="otext" type="text" id="to" readonly disabled>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Flight Date</label>
+                    <input type="text" class="otext" id="fdate" readonly disabled>
+                </div>
+                <div class="input-line">
+                    <label for="name">Flight Time</label>
+                    <input class="otext" type="text" id="ftime" readonly disabled>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Flight Classes</label>
+                    <select id="fclass" readonly disabled>
+
+                    </select>
+
+                </div>
+                <div class="input-line">
+                    <label for="name">Price</label>
+                    <input class="otext" type="text" id="price" readonly disabled>
+                </div>
+            </div>
+
+            <div class="input-container">
+
+                <div class="input-line">
+                    <label for="name">Flight Number</label>
+                    <input class="otext" type="text" id="fnum" readonly disabled>
+                </div>
+                <div class="input-line">
+                    <label for="name">Seat Number</label>
+                    <table width="50%">
+                        <tr>
+                            <td>
+                                <select class="secsel" id="flightalpha" disabled></select>
+
+
+                            </td>
+                            <td>
+
+                                <select class="secsel" id="seat" disabled></select>
+                            </td>
+
+                        </tr>
+
+
+                    </table>
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+            <input type="button" id="confirm" value="Create Notification" />
+
+            <div class="input-container">
+
+
+                <!-- onclick="self.close()" -->
+
+
+                <details>
+                    <summary>
+                        <div class="btn_view">
+                            Seat Information
+                        </div>
+                        <div class="details-modal-overlay"></div>
+                    </summary>
+                    <div class="details-modal">
+                        <div class="details-modal-close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                        <div class="details-modal-title">
+                            <h1>Plane Structure</h1>
+                        </div>
+                        <div class="details-modal-content">
+                            <p>
+                                <img src="img/plane.png" />
+                            </p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+
+
+
+
+
+            <div id="openModal" class="modalbg">
+                <div class="dialog">
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2 class="popupt">Create Notification</h2>
+                    <br>
+
+
+
+                    <hr>
+                    <br>
+                    <strong>Contact Method:</strong>
+                    <select id="ntmethod" class="select">
+                        <option value="1">Notify Me By</option>
+                        <option value="2">Voice Message</option>
+                        <option value="3">Email Message</option>
+                        <option value="4">Text Message</option>
+                    </select>
+
+                    <a class="newtextbox"></a>
+                    <br>
+                    <br>
+
+                    <v>Due to privacy considerations, if you reside outside the Hong Kong Region, you may not designate
+                        anyone other than yourself as the recipent for the notification.</b>
+                        <br>
+                        <br>
+                        <hr>
+                        <strong>Notification Options</strong>
+                        <br>
+                        <v>Send me notification of the flight status (on-time,delayed or canceled).</v>
+                        <br>
+                        <select class="select">
+                            <option value="1">When to Notify Me</option>
+                            <option value="2">30 minutes</option>
+                            <option value="3">1 hour</option>
+                            <option value="4">2 hours</option>
+                            <option value="4">3 hours</option>
+                            <option value="4">4 hours</option>
+                        </select>
+                        <br>
+                        <br>
+                        <strong> Notify Me For</strong>
+                        <br>
+                        <input type="checkbox" class="define"> Departure</input>
+                        <input type="checkbox" class="define"> Arrival</input>
+                        <br>
+                        <br>
+                        <strong> Also Send Me</strong>
+                        <br>
+
+                        <input type="checkbox" class="define"> Gate changes</input>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                          <button id="removea" class="btn-72">Confirm Notification Settings</button> 
+                        <br>
+                        <br>
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- <div class="input-container">
+
+                <div class="input-line">
+                    <label for="name">Luggage Weight Allowance</label>
+                    <input type="text" id="luggage" readonly disabled>
+                </div>
+            </div> -->
+
+    </div>
+    </form>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/checkin.css">
+    <title>Complete your purchase</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script src="js/checkin.js"></script>
+<header><img src="img/IVEIcon.png">
+
+
+
+
+
+</header>
+
+<body>
+    <!-- <h2 class="form-title">Check In List</h2> -->
+
+ 
+
+
+    <div class="form-container">
+        <h2 class="form-title">Check-In</h2>
+        <form action="" class="checkout-form">
+            <!-- <div class="input-line">
+                <label for="name">Name on card</label>
+                <input type="text" name="name" id="c1" placeholder="Your name and surname">
+            </div>
+            <div class="input-line">
+                <label for="name">Card number</label>
+                <input type="text" name="num1" id="c2" placeholder="1111-2222-3333-4444">
+            </div> -->
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Flight Pl</label>
+                    <input type="text" name="namedate" id="c3" placeholder="09-21" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">CVC</label>
+                    <input type="text" name="num2" id="c4" placeholder="***" readonly> 
+                </div>
+            </div> 
+            <table id="samerecord">
+                <tr>
+                    <th class="tatitle">Select</th>
+                    <th class="tatitle">Flight Class</th>
+                    <th class="tatitle">Seat Number</th>
+                    <th class="tatitle">Passenger Name</th>
+                    <th class="tatitle">Passenger Passport Number</th>
+                    
+                </tr>
+                
+
+            </table>
+
+
+            
+                
+  
+
+
+
+    </form>
+    
+    
+    </div>
+    <b href="javascript:;" id="continue">
+        <svg class="icon-arrow before">
+            <use xlink:href="#arrow"></use>
+        </svg>
+        <span  class="label">Continue</span>
+        <svg class="icon-arrow after">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </b>
+    
+    <svg style="display: none;">
+      <defs>
+        <symbol id="arrow" viewBox="0 0 35 15">
+          <title>Arrow</title>
+          <path d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "/>
+        </symbol>
+      </defs>
+    </svg>
+
+      
+
+</br>
+
+
+
+
+
+
+
+
+
+
+    <div id="openModal" class="modalbg">
+        <div class="dialog">
+            <a href="#close" title="Close" class="close">X</a>
+            <h2 class="popupt">Web Check-In</h2>
+            <br>
+            <h2 class="popupt" id="popuptitle">
+                Dangerous Goods & Restricted Articles
+            </h2>
+            <hr>
+
+            if you have any dangerous goods or restricted articles.plseas declare them,carry these objects may be an
+            offence & may result in prosecution.</br>
+
+            <br>
+            <h4>Important Notice for passengers</h4>
+            </br>
+            <ul>
+                <li>Only travel with baggage that belongs to you.</li>
+                <li>Do not accept baggage from other people.</li>
+                <li>Do not leave your bags unattended.</li>
+            </ul>
+
+            <br>
+
+            <table id="shown">
+                <tr>
+                    <td><img src="img/Corrosives.PNG" /></td>
+                    <td><img src="img/Gas.PNG" /></td>
+                    <td><img src="img/Flammable_Liquids.PNG" /></td>
+                    <td><img src="img/orangic_peroxides.PNG" /></td>
+                    <td><img src="img/Oxidising_materials.PNG" /></td>
+                    <td><img src="img/toxic_substances.PNG" /></td>
+                </tr>
+                <tr>
+                    <td class="descrip">Corrosives</td>
+                    <td class="descrip">Gas</td>
+                    <td class="descrip">Flammable Liquids</td>
+                    <td class="descrip">Orangic Peroxides</td>
+                    <td class="descrip">Oxidising Materials</td>
+                    <td class="descrip">Toxic Substances</td>
+
+                </tr>
+            </table>
+
+
+            <br>
+            <br>
+
+
+            <br>
+            <br>
+
+            <a href="#close"> <button id="removea" class="btn-72">OK, Notice</button></a>
+
+        </div>
+    </div>
+
+
+    <button class="noselect" id="` + hasrecord + `" onclick="$(location).prop('href', '#openModal');"><span
+            class='text'>Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24">
+                <path
+                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+            </svg></span></button>
+
+
+
+</body>
+
+
+</html>

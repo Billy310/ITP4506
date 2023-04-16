@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/NormalUser.css">
+
+
+    <title>Normal User Main Page </title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script type="text/javascript" language="javascript" src="js/normaluserserach.js"></script>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    
+                    <a href="n_homepage.html">
+                        <i class="fas fa-clinic-medical"></i>
+                        <div class="title">
+                            <div id="wt">Welcome</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="n_homepage.html">
+                        <i class="fas fa-th-large"></i>
+                        <div class="title">Ticket Managemnet</div>
+                    </a>
+                </li>
+                <li>
+                    <a  href="Ticket.html">
+                        <i class="fas fa-th-large"></i>
+                        <div class="title">Reserve Ticket</div>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="n_personal.html">
+                        <i class="fas fa-th-large"></i>
+                        <div class="title">Account Infromation</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Login.html" onclick="window.localStorage.setItem('operate', null);window.localStorage.setItem('name', null);">
+                        <i class="fas fa-stethoscope"></i>
+                        <div class="title" id="logout">Logout</div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="main">
+            <div class="top-bar">
+                <div class="search">
+                    Welcome To The IVE AirLine Personal Ticket Centre!
+                </div>
+                <i class="fas fa-bell"></i>
+                <div class="user">
+                    <img src="img/IVEIcon.png">
+                </div>
+            </div>
+            <div class="cards">
+                <br>
+                <h4>Search:</h4>
+                <br>
+                <label>Class:*</label>
+                <select id="fclassoption" class="select">
+                    <option value="">Please Select The Flight Class!</option>
+                </select>
+
+                <label>From: (Location)*</label>
+                <select id="fromcountry" class="select">
+                    <option value="">Please Select The Country!</option>
+
+
+                </select>
+                <label>To: (Location)*</label>
+                <select id="tocountry" class="select">
+                    <option value="">Please Select The Country!</option>
+
+
+                </select>
+
+                <br>
+                <br>
+                <h4>Specifc Requirement:</h4>
+                <br>
+                <label>Date:</label>
+                <input type="date" placeholder="dd-mm-yyyy" name="search" id="sdate" />
+
+
+                <br>
+                <br>
+
+                <h4>Search: </h4>
+                <br>
+                <br>
+                <button class="pushable" id="btnsearch">
+                    <span class="front">
+                        Search
+                    </span>
+                </button>
+            </div>
+            <div class="tables">
+                <div class="last-appointments">
+                    <div class="heading">
+                    </div>
+                    <table class="appointments" id="realdata">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="openModal" class="modalbg">
+        <div class="dialog">
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Are You Sure to Cancel?</h2>
+            <br>
+            <strong>Cancellation policy</strong>
+            <hr>
+            <br>
+            <div class="deldata"></div><br><hr>
+            <br>
+            
+
+            <h3>Tell us your reason for cancelling</h3>
+            <h4>This is needed to complete your cancellation</h4><br><br>
+
+            <input type="radio" name="response"/>  Personal Reason/trip was cancelled off <br><br>
+            <input type="radio" name="response"/>  Change of dates or destination <br><br>
+            <input type="radio" name="response"/>  Change in the number of needs of travellers <br><br>
+            <input type="radio" name="response"/>  Made booking for the same dates, want to cancel the ones I don't need <br><br>
+            <input type="radio" name="response"/>  I found an altemative option <br><br>
+            <input type="radio" name="response"/>  None of the above <br><br>
+            
+            
+       
+            
+           
+            <a><button id="removea" class="bn632-hover bn23">Accept</button></a>
+            <a href="#close"> <button class="bn632-hover bn28">Cancel</button></a>
+       
+        </div>
+    </div>
+
+
+    
+            
+
+            <div class="willbeadd"></div>
+</body>
+
+
+</html>

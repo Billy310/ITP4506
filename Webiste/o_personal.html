@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/o_personal.css">
+
+
+  <title>Admin </title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script type="text/javascript" language="javascript" src="js/UPDATEPERSONAL.js"></script>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fas fa-clinic-medical"></i>
+            <div class="title">
+              <div id="wt">Welcome</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="o_personal.html">
+            <i class="fas fa-th-large"></i>
+            <div class="title">Account Infromation</div>
+          </a>
+        </li>
+        <li>
+          <a href="o_homepage.html">
+            <i class="fas fa-th-large"></i>
+            <div class="title">Check Customer Ticket</div>
+          </a>
+        </li>
+        <li>
+          <a href="Login.html"
+            onclick="window.localStorage.setItem('operate', null);window.localStorage.setItem('name', null);">
+            <i class="fas fa-stethoscope"></i>
+            <div class="title">Logout</div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="main">
+      <div class="top-bar">
+        <div class="search">
+
+        </div>
+        <i class="fas fa-bell"></i>
+        <div class="title"></div>
+        <div class="content">
+          <form action="#">
+            <br><br><br><br><br>Custom Information:
+            <div class="user-details">
+              <div class="input-name">
+
+                <span class="details">Username</span>
+                <input type="text" id="username" placeholder="Enter your username" readonly>
+
+
+              </div>
+            </div>
+            <div class="user-details">
+
+              <div class="input-box">
+                <span class="details">Email Address</span>
+                <input type="text" id="email" placeholder="Enter your Email Address" readonly>
+                <div class="getcode"> <input type="button" id="getcode" class="getcode"
+                    value="Get Security Code"></input></div>
+                <div class="responseusermsg"> </div>
+
+              </div>
+
+
+              <div class="input-box">
+                <span class="details">Security Code </span>
+                <input type="text" id="sec" placeholder="Enter your Code received " maxlength="5" required>
+                <div id="secc"> </div>
+
+              </div>
+              <div class="input-box">
+                <span class="details">Password </span>
+                <input type="text" id="pwd1" placeholder="Enter your password" required>
+
+                <div id="password">
+                  <!-- &#10004;	 -->
+                  &#10060; At least 7 digits
+                  <br>
+                  &#10060; At least one Capital Letter
+                  <br>
+                  &#10060; At least one Special Letter
+                  <br>
+                  &#10060; At least one Numeric Letter
+                </div>
+              </div>
+              <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="text" id="pwd2" placeholder="Confirm your password" required>
+              </div>
+            </div>
+            <div class="button">
+              <input type="button" id="btnsub" value="Confirm">
+            </div>
+
+          </form>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+  </div>
+</body>
+<!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+
+</html>

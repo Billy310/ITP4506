@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/preview.css">
+    <title>Complete your purchase</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script src="js/previewticket.js"></script>
+<header><img src="img/IVEIcon.png">
+
+
+
+
+
+</header>
+
+<body>
+    <!-- <h2 class="form-title">Check In List</h2> -->
+
+ 
+
+
+    <div class="form-container">
+        <h2 class="form-title">Preview Ticket</h2>
+        <form action="" class="checkout-form">
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">From (Region)</label>
+                    <input type="text" id="fromr" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">To  (Region)</label>
+                    <input type="text" id="tor" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">From (Location)</label>
+                    <input type="text" id="froml" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">To (Location)</label>
+                    <input type="text" id="tol" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Flight Date</label>
+                    <input type="text" id="fdate" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Flight Time</label>
+                    <input type="text" id="ftime" readonly>
+                </div>
+            </div>
+            <div class="input-container">
+         
+                <div class="input-line">
+                    <label for="name">Flight Number</label>
+                    <input type="text" id="fnum" readonly>
+                </div>
+                <div class="input-line">
+                    <label for="name">Plane Model</label>
+                    <input type="text" id="pmodel" readonly>
+                </div>
+
+                </div>
+                <div class="input-container">
+         
+                    <div class="input-line">
+                        <label for="name">Allow Luggage</label>
+                        <input type="text" id="fnum" value="8 kg" readonly>
+                    </div>
+                    <div class="input-line">
+                        <label for="name">Tax: (HKD$)</label>
+                        <input type="text" id="tax" value="120" readonly>
+                    </div>
+    
+                    </div>
+                <div class="input-container">
+                <table id="ticketdata">
+                    <thead>
+                      <tr>
+                        <th>TICKET TYPE</th>
+                        <th>PRICE</th>
+                        <th>SEAT AVAILABLE</th>
+                      </tr>
+                    <thead>
+                    <tbody>
+                        
+
+                    
+                </table>
+            </div>
+    
+    </form>
+    
+    
+    </div>
+
+
+    <div class="col">
+
+        <details>
+            <summary>
+                <div class="btn_view">
+                    Seat Information
+                </div>
+                <div class="details-modal-overlay"></div>
+            </summary>
+            <div class="details-modal">
+                <div class="details-modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                        fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                            fill="black" />
+                    </svg>
+                </div>
+                <div class="details-modal-title">
+                    <h1>Plane Structure</h1>
+                </div>
+                <div class="details-modal-content">
+                    <p>
+                        <img src="img/plane.png" />
+                    </p>
+                </div>
+            </div>
+        </details>
+
+        <div class="btn_continue">Reserve</div>
+
+    </div>
+    <!-- <b href="javascript:;" id="continue">
+        <svg class="icon-arrow before">
+            <use xlink:href="#arrow"></use>
+        </svg>
+        <span  class="label">Continue</span>
+        <svg class="icon-arrow after">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </b>
+    
+    <svg style="display: none;">
+      <defs>
+        <symbol id="arrow" viewBox="0 0 35 15">
+          <title>Arrow</title>
+          <path d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "/>
+        </symbol>
+      </defs>
+    </svg> -->
+
+      
+
+</br>
+
+
+   
+
+
+ 
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,75 @@
+{
+    "user": [
+        {
+            "name": "Shyam",
+            "pwd": "Shyam",
+            "permission": "A",
+            "email":"Shyam@gmail.com",
+            "first": "N"
+        },
+        {
+            "name": "Bob",
+            "pwd": "Bob",
+            "permission": "O",
+            "email":"Bob@gmail.com",
+            "first": "Y"
+        },
+        {
+            "name": "Bobo",
+            "pwd": "Bobo",
+            "permission": "O",
+            "email":"Bobo@gmail.com",
+            "first": "N"
+        },
+        {
+            "name": "Jai",
+            "pwd": "Jai",
+            "permission": "N",
+            "email":"Jai@gmail.com",
+            "first": "N"
+        },
+        {
+            "name": "Billy",
+            "pwd": "Billy",
+            "permission": "N",
+            "email":"Billy@gmail.com",
+            "first": "N"
+            
+        },
+        {
+            "name": "Yiu",
+            "pwd": "Yiu",
+            "permission": "N",
+            "email":"Yiu@gmail.com",
+            "first": "N"
+        },
+        {
+            "name": "Charlotte",
+            "pwd": "Charlotte",
+            "permission": "N",
+            "email":"Charlotte@gmail.com",
+            "first": "N"
+
+
+        },
+        {
+            "name": "Jame",
+            "pwd": "Jame",
+            "permission": "O",
+            "email":"Jame@gmail.com",
+            "first": "N"
+
+
+        },
+        {
+            "name": "Balotelli",
+            "pwd": "Balotelli",
+            "permission": "N",
+            "email":"Balotelli@gmail.com",
+            "first": "N"
+
+
+        }
+        
+    ]
+}

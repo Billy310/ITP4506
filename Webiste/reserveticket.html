@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/takenewticket.css">
+    <title>Complete your purchase</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/reserveticket.js"></script>
+</script>
+<header> <img src="img/IVEIcon.png"/> </header>
+<body>
+
+ 
+
+    <div class="haha"></div>
+    <div class="progress-checkout-container">
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <label class="step-title">Ticket Selection</label>
+        </div>
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <label class="step-title">Payment</label>
+        </div>
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <label class="step-title">Finish Ticket Booking</label>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2 class="form-title">Reserve Ticket</h2>
+        <div class="input-container">
+        <div class="input-line">
+            <label for="name">Flight Date:</label>
+            <input type="date" name="name" id="fdate" placeholder="dd/MM/yyyy" readonly disabled>
+        </div>
+        <div class="input-line">
+            <label for="name">Flight Time:</label>
+            <input type="text" id="ftime" readonly disabled></input>
+        </div>
+        </div>
+        <div class="input-container">
+
+
+            <div class="input-line">
+                <label for="name">From: (Location)</label>
+                <input type="text" id="dlocat" readonly disabled></input>
+            </div>
+
+            <div class="input-line">
+                <label for="name">To: (Location)</label>
+                <input type="text" id="alocat" readonly disabled></input>
+            </div>
+
+
+
+        </div>
+
+
+
+        <div class="input-container">
+            <div class="input-line">
+                <label for="name">Flight Class:</label>
+                <select class="editable" id="flightclass">
+                    <option value="stop">Please Select The Flight Class!</option>
+                </select>
+            </div>
+            <div class="input-line">
+                <label for="name">Quantity</label>
+                <input class="editable" type="number" id="quantity" min="1" max="10" placeholder="Quantity"></input>
+            </div>
+        </div>
+
+
+        <div class="input-container">
+            <div class="input-line">
+                <label for="name"> Each Ticket Price (HKD$)</label>
+                <input type="text" id="price" value="0" readonly  ></input>
+            </div>
+            <div class="input-line">
+                <label for="name">Seat Available:</label>
+                <input type="text" id="ava" readonly disabled />
+            </div>
+
+        </div>
+        <div class="input-container">
+            <div class="input-line">
+                <input type="button" class="tablebtn" id="adddata" value="Add Ticket">
+
+            </div>
+            <div class="input-line">
+                <input type="button" id="reset" class="tablebtn" value="Reset">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<label for="name">Reserve Ticket:</label>
+    <div class="table-container">
+
+        <table class="rwd-table" width="100%" height="">
+           
+
+            <tr>
+                <th>Location</th>
+                <th>Flight Class</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+
+        </table>
+
+
+    </div>
+    <div class="form-container">
+        <div class="input-container">
+            <div class="input-line">
+                <label for="name">Total Ticket Price (HKD$)</label>
+                <input type="text" id="tprice" value="0" readonly disabled></input>
+            </div>
+            <div class="input-line">
+                <label for="name">Total Quantity of Ticket</label>
+                <input type="text" id="ticketq" value="0" readonly disabled></input>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="form-container">
+
+    <input type="button" class="dfbtn" id="pay" value="Complete purchase">
+
+    </div>
+
+
+
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

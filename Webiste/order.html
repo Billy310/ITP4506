@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/order.css">
+    <title>Complete your purchase</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script src="js/orderscript.js"></script>
+<header><img src="img/IVEIcon.png"></header>
+
+<body>
+
+
+    <div class="progress-checkout-container">
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <span class="step-title">Shipping</span>
+        </div>
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <span class="step-title">Payment</span>
+        </div>
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <span class="step-title">Finish Ticket Booking</span>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2 class="form-title">Payment Details</h2>
+        <form action="" class="checkout-form">
+            <div class="input-line">
+                <label for="name">Name on card</label>
+                <input type="text" name="name" id="c1" placeholder="Your name and surname">
+            </div>
+            <div class="input-line">
+                <label for="name">Card number</label>
+                <input type="text" name="num1" id="c2" placeholder="1111-2222-3333-4444">
+            </div>
+            <div class="input-container">
+                <div class="input-line">
+                    <label for="name">Expiring Date</label>
+                    <input type="text" name="namedate" id="c3" placeholder="09-21">
+                </div>
+                <div class="input-line">
+                    <label for="name">CVC</label>
+                    <input type="text" name="num2" id="c4" placeholder="***">
+                </div>
+            </div>
+            <input type="button" id="pay" value="Complete purchase">
+
+        </form>
+    </div>
+
+  
+
+
+    <button id="checkoutlist">Checkout List</button>
+
+
+
+    <div id="openModal" class="modalbg">
+        <div class="dialog">
+            <a href="#close" title="Close" class="close">X</a>
+            <h2 class="popupt">Web Check-In</h2>
+            <br>
+            <h2 class="popupt" id="popuptitle">
+             Checkout List
+            </h2>
+            <hr>
+
+            
+                <div class="record">
+                    <html>
+        
+                    <head>
+                    </head>
+        
+                    <body>
+                        <div class="tabletitle"></div>
+                        <table>
+                            <div class="record">
+                                <table class="realdata">
+                                    <thead>
+                                        <tr>
+                                            <th> </th>
+                                            <th>Item Name</th>
+                                            <th>Quantity</th>
+                                            <th>Price (Each)</th>
+                                            <th>Price (HKD$)</th>
+                                        </tr>
+                                        <thead>
+                                        <tbody>
+                                        </tbody>
+                                </table>
+        
+                            </div>
+                        </table>
+       
+
+
+            <br>
+            <br>
+
+
+            <br>
+            <br>
+
+          
+
+        </div>
+    </div>
+
+
+
+
+
+ 
+
+</body>
+
+</html>

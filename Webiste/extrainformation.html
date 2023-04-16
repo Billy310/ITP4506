@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/extrainformation.css">
+    <title>Information:</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script type="text/javascript" language="javascript" src="js/extrainformation_in.js"></script>
+<header> <img src="img/IVEIcon.png" />
+
+</header>
+
+<body>
+
+
+
+
+
+
+
+
+    <form action="" class="checkout-form">
+        <div class="input-container">
+            <div class="input-line">
+
+
+
+                <div class="content">
+                    <div class="con1"><strong> Check-In Confirmation</strong> </div>
+                    <div class="con2">
+                        <lab>Will anyone in this reservation be sharing their seat with an infant?</lab>
+                        <br>
+                        <input type="radio" id="correct" name="ask">Yes</input>
+                        <input id="wrong" type="radio" name="ask">No</input>
+
+                    </div>
+                    <div class="con3">
+                        <lab>For security purposes. please verity your passport information and data of birth:</lab>
+                        <hr>
+                        <div class="pname">Passenger:</div>
+                        <br>
+                        <lab>Passport Number(Infant)*</lab>
+                        <lab class="lab"> Date of Birth (Infant)*</lab>
+                        <br>
+                        <input type="text" class="txt" placeholder="Your Passport Number"></input>
+                        <select class="firstselect" id="date"></select>
+                        <select class="month"></select>
+                        <select id="year"></select>
+                        <br>
+                        <lab>Passport Expiration Date(Infant) *</lab>
+                        <br>
+                        <select class="date"></select>
+                        <select class="month"></select>
+                        <select class="year"></select>
+                        <br>
+                        <!-- <button id="reset" value="reset"></button> -->
+                        <!-- <button>Continue</button> -->
+                        <br>
+
+                    </div>
+                    <div class="con4">
+                        <lab>Do you have any luggage carry during on the Flight?</lab>
+                        <br>
+                        <input type="radio" id="lcorrect" name="lask"> Yes</input><input id="lwrong" type="radio"
+                            name="lask">No</input>
+                        <br>
+
+                    </div>
+                    <div class="con5" id="lug">
+                        <lab>Estimated Weight of Luggage(kg):</lab>
+                        <br>
+                        <input class="requireto" type="text" id="lugweight"
+                            placeholder="The Total Weight of Luggage"></input>
+                        <br>
+                        <lab>Number of Luggage :</lab>
+                        <br>
+                        <input class="requireto" type="text" placeholder="Number of Luggage"></input>
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+            </div>
+            <!-- <a href="boardingpass_download.html"> -->
+                <span id="nice">Continue</span>
+            <!-- </a> -->
+            <!-- <button id="nice">n</button>
+            <button id="confirmation">Continue</button>
+            <button id="confirmation">Continue</button> -->
+
+
+</body>
+
+
+</html>

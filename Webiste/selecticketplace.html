@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/selectseat.css">
+    <title>Ticket</title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script src="js/selectticketplace.js"></script>
+
+<header> <img src="img/IVEIcon.png"/> </header>
+<body>
+
+ 
+
+
+    <div class="progress-checkout-container">
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <span class="step-title">Ticket Selection</span>
+        </div>
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <span class="step-title">Payment</span>
+        </div>
+        <div class="progress-step-container">
+            <div class="step-check"></div>
+            <span class="step-title">Finish Ticket Booking</span>
+        </div>
+    </div>
+
+
+
+
+    <div class="form-container">
+        <label>Location:</label>
+        <input type="text" id="flightlocation" value="" readonly>
+
+    </div>
+
+    <table class="rwd-table"  >
+
+        <tr>
+            <th>Flight Class</th>
+            <th>Seat Number</th>
+            <th>Passenger Name</th>
+            <th>Passenger Passport Number</th>
+
+        </tr>
+
+    </table>
+
+    <img src="img/plane.png">
+
+
+    <div class="form-container">
+        <input type="button" id="pay" value="Next">
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

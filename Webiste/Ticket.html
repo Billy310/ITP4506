@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bookingview.css">
+  <script src="jslib/jquery-1.11.1.js"></script>
+  <script src="./js/ticket.js"></script>
+
+  <title>Booking</title>
+</head>
+
+<body>
+  <header id="header">
+    <nav class="links" style="--items: 5;">
+      <a href="index.html">Explore</a>
+      <a href="Ticket.html">Book</a>
+      <a href="loadingformainmage.html ">Check For Ticket</a>
+      <a href="Help.html">Help</a>
+      <a href="login.html">Login|Sign up</a>
+      <span class="line"></span>
+    </nav>
+  </header>
+
+
+  <div class="content">
+    <h4>IVE AIRLINE Ticket Search:</h4>
+
+
+    <br>
+    <strong>Location*</strong>
+    <br>
+    <label>From: </label>
+    <select id="fromcountry" class="select">
+      <option value="">Please Select The Region!</option>
+    </select>
+
+
+    <label>To: </label>
+    <select id="tocountry" class="select">
+      <option value="">Please Select The Region!</option>
+
+    </select>
+
+    <br>
+
+    <strong>Special Specification:</strong>
+    <br>
+    <br>
+    <label>Date:</label>
+    <input type="date" name="search" id="sdate" />
+    <br>
+    <br>
+    <label>Travel Time: (From)</label>
+    <select id="fromtime" class="selectt">
+      <option value="-1">Please Select The Time</option>
+
+    </select>
+    <label>Travel Time: (To)</label>
+    <select id="totime" class="selectt">
+      <option value="-1">Please Select The Time</option>
+    </select>
+    <br>
+
+    <br>
+
+    <button id="btnsearch"><span>Search</span></button>
+    <img id="imgs" src="img/IVEIcon1.png">
+  </div>
+
+
+
+ 
+
+  <div class="content1">
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Flight Date</div>
+        <div class="col col-5">Flight Time</div>
+        <div class="col col-2">Flight Location Information</div>
+ 
+        <div class="col col-3">Flight Number</div>
+        <div class="col col-4">Action</div>
+      </li>
+      <div id="realdata">
+
+      </div>
+    </ul>
+
+
+  </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/AdminPage.css">
+
+
+    <title>Admin </title>
+</head>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        var mainname= localStorage.getItem("name");
+       $("#wt").append("    "+mainname);
+        $("#realdata").html("<thead><td>Username</td><td>Permisson</td></thead><tbody><tr></tr></tbody></table>");
+
+        $("#realdata").html("<thead><td>Username</td><td>Permisson</td></thead><tbody><tr></tr></tbody></table>");
+        var hasrecord = 0;
+        $.getJSON("json/userinfo.json", function (jd) {
+
+            for (var i = 0; i < jd.user.length; i++) {
+
+
+                hasrecord += 1;
+
+                $("#realdata").append(
+                    "'<tr><td>" +
+                    jd.user[i].name +
+                    "</td><td>"
+                    + checkoperation(jd.user[i].permission) +
+                    "</td><td>"
+                    +
+
+                    " </tr> '");
+                $("#realdata").append("</tbody></table>");
+
+
+            };
+
+
+        });
+
+        function checkoperation(opname) {
+            if (opname == "A") {
+
+                return "Admin"
+
+            }
+
+            if (opname == "O") {
+                return "Operator"
+
+            }
+
+            if (opname == "N") {
+
+                return "Normal User"
+
+            }
+
+
+        }
+
+    });
+</script>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-clinic-medical"></i>
+                        <div class="title"><div id="wt">Welcome</div> </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="AdminPage.html">
+                        <i class="fas fa-th-large"></i>
+                        <div class="title">Ticket Information</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Accountmanagement.html">
+                        <i class="fas fa-stethoscope"></i>
+                        <div class="title">Account Management</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-user-md"></i>
+                        <div class="title">Logout</div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="main">
+            <div class="top-bar">
+                <div class="search">
+
+                </div>
+                <i class="fas fa-bell"></i>
+                <div class="user">
+
+                </div>
+            </div>
+            <div class="cards">
+
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+            <div class="tables">
+                <div class="last-appointments">
+                    <div class="heading">
+                        <h2>Make New Account</h2>
+                        <a href="registationoperator.html" class="btn">Make New Account</a>
+                    </div>
+                    <table class="appointments" id="realdata">
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
